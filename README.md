@@ -1,6 +1,43 @@
-# Getting Started with Create React App
+# About the app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app follows all the spec mentioned in the challenge
+- [x] Can upload a new cat image
+- [x] Can view the cat images uploaded
+- [x] Can favourite and unfavourite a cat
+- [x] Can vote a cat up or down 
+- [x] Can view a score on each cat based on votes
+
+# Tech used
+
+The app is created using `create-react-app` template and uses ReactJs, Javascript and Typescript to power the app on the browser. The is an SPA with 2 routes - one is Home ( `/`) and the other a screen for uploading images (`/upload`).
+`react-router` is used to achieve navigation ad redirection elegantly. React Hooks are used wherever they seem fit to handle state in the components
+
+  ## Network Calls
+  Network calls are done using a open source library called `react-query`. The reason I chose react-query is because it is very much declarative in that I just need    to specify where to get the data from with very minimal configuration. It works very well with async/await so it is easier to not only fetch data but also          process the data easily avoiding the use of things like reducers for simple requirements. All it needs it a function to resolve on data fetching.
+  `axios` is used as a library for making network calls and getting responses
+  
+  ## Strongly typed 
+  With the use of typescript almost all run time issues are captured during build time thanks to strong type support. 
+  
+  ## State management
+  I have used React hooks in most of the components as it gives 2 benefits. 1. Easier and clearer state management with in components 2. Write functional components as opposed to class components
+  
+  ## Design
+  I've used Tailwind css for designing the UI for this app. It is very easy to set up and has most of what I needed. Most of the styles are available out of the box
+  and also makes it easier for responsive design. The app scales very neatly in Desktop and mobile views
+  
+  ## Uploader
+  - [x] `react-images-upload` is used to upload the image as it has some really nice features. It is a bit lagging in terms of updates and I may hesitate to use it in production but for the sake of this challenge it does not present any challenges. It works well for trivial use cases especially with a variety of props
+  - [x] Validation messages such as when trying to upload an image over allowed size limit, invalid format etc are handled and appropriate error message is shown.
+  - [x] A preview is shown before the image is actually uploaded
+  - [x] On error from the image upload API, the actual friendly error message is shown to the user
+  - [x] The api uses image classification techniques to chek if the user has actually uploaded a cat image and the same response from API is handled in the app 
+  
+  
+  ## Testing
+  I've used React Testing Library to unit test the components. All components have basic unit tests to ensure compnenents load and render correctly. 
+
+
 
 ## Available Scripts
 
