@@ -9,7 +9,7 @@ The app follows all the spec mentioned in the challenge
 
 # Tech used
 
-The app uses ReactJs, Javascript and Typescript to power the app on the browser. The is an SPA with 2 routes - one is Home ( `/`) and the other a screen for uploading images (`/upload`).
+The app is created using `create-react-app` template and uses ReactJs, Javascript and Typescript to power the app on the browser. The is an SPA with 2 routes - one is Home ( `/`) and the other a screen for uploading images (`/upload`).
 `react-router` is used to achieve navigation ad redirection elegantly. React Hooks are used wherever they seem fit to handle state in the components
 
   ## Network Calls
@@ -27,7 +27,12 @@ The app uses ReactJs, Javascript and Typescript to power the app on the browser.
   and also makes it easier for responsive design. The app scales very neatly in Desktop and mobile views
   
   ## Uploader
-  `react-images-upload` is used to upload the image as it has some really nice features. It is a bit lagging in terms of updates and I may hesitate to use it in production but for the sake of this challenge it does not present any challenges. It works well for trivial use cases especially with a variety of props
+  - [x] `react-images-upload` is used to upload the image as it has some really nice features. It is a bit lagging in terms of updates and I may hesitate to use it in production but for the sake of this challenge it does not present any challenges. It works well for trivial use cases especially with a variety of props
+  - [x] Validation messages such as when trying to upload an image over allowed size limit, invalid format etc are handled and appropriate error message is shown.
+  - [x] A preview is shown before the image is actually uploaded
+  - [x] On error from the image upload API, the actual friendly error message is shown to the user
+  - [x] The api uses image classification techniques to chek if the user has actually uploaded a cat image and the same response from API is handled in the app 
+  
   
   ## Testing
   I've used React Testing Library to unit test the components. All components have basic unit tests to ensure compnenents load and render correctly. 
