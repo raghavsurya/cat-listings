@@ -12,7 +12,6 @@ interface CatProps {
 }
 
 const Cat: React.FC<CatProps> = ({ imgSrc, imageId, isFavourite, favouriteId, votes, upvotes, downvotes }: CatProps) => {
-    console.log(isFavourite)
     const [favourite, setFavourite] = useState(isFavourite);
     const [vote, setVote] = useState(votes);
     const [upvoteCount, setUpvotes] = useState(upvotes);
@@ -25,10 +24,7 @@ const Cat: React.FC<CatProps> = ({ imgSrc, imageId, isFavourite, favouriteId, vo
         if(updatedFav === true) {
             await favouriteCat(imageId);
         } else {
-            console.log(favouriteId)
-            console.log("Hey")
             if(favouriteId !== undefined) {
-                console.log(favouriteId)
                 await unfavouriteCat(favouriteId);
             }
         }

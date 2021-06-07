@@ -36,7 +36,6 @@ const getFavourites = async(catsResponse: CatType[]) => {
 
 const getVotes = async(catsWithFavourites: CatType[]) => {
   const votesResponse = await axiosInstance.get('/votes?limit=10000');
-  console.log(votesResponse)
     let catsWithFavouritesAndVotes: CatType[] = []
     catsWithFavourites.map((item: CatType) => {
       const upvoteItems = votesResponse.data.filter((voteItem: any) => voteItem.image_id == item.id && voteItem.value === 1)

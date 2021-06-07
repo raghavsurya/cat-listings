@@ -35,7 +35,7 @@ The app is created using `create-react-app` template and uses ReactJs, Javascrip
   
   
   ## Testing
-  I've used React Testing Library to unit test the components. All components have basic unit tests to ensure compnenents load and render correctly. 
+  I've used React Testing Library to unit test the components. All components have basic unit tests to ensure compnenents load and render correctly. Tests can be run by running the command `npm test`
 
 
 
