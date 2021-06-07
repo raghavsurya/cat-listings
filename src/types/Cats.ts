@@ -12,7 +12,3 @@ export type CatType = {
     upvotes: number,
     downvotes: number
 }
-export type CatsType = {
-    data: CatType[] | undefined
-}
-

@@ -24,7 +24,6 @@ const Upload = () => {
         } catch (err) {
             if (err.response) {
                 setIsUploading('false');
-                console.log(err.response)
                 setError(err.response.data.message)
             }
         }
