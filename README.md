@@ -43,6 +43,8 @@ The app is created using `create-react-app` template and uses ReactJs, Javascrip
 
 In the project directory, you can run:
 
+### `npm install`
+
 ### `npm start`
 
 Runs the app in the development mode.\
